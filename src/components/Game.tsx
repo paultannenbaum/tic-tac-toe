@@ -217,11 +217,17 @@ const Game = () => {
 
       return valueString === "XXX" || valueString === "OOO";
     });
+    const allMovesPlayed = tiles.filter((t) => t.value).length === tiles.length
 
     if (winningRoute) {
       setWinningPlayer(movePlayedBy);
       setGameState(GAME_CLOSED);
     }
+
+    if (allMovesPlayed) {
+      setGameState(GAME_CLOSED)
+    }
+
   }, [tiles, currentPlayer]);
 
   const recordTilePlay = (tile: TileType): void => {
