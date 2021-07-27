@@ -6,7 +6,7 @@ interface Props {
 
 const Tile = ({ xPos, yPos, value }: Props) => {
   return (
-    <div>
+    <div className="tile">
       xPos: {xPos}, yPos: {yPos}, value: {value},
     </div>
   );
