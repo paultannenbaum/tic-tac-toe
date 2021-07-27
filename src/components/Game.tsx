@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "../styles.css";
 import Announcement from "./Announcement";
 import Tile from "./Tile";
+import styled from 'styled-components'
 import _ from "lodash";
 
 // Constants
@@ -247,13 +248,13 @@ const Game = () => {
   };
 
   return (
-    <div id="container">
+    <Container>
       <Announcement
         gameState={gameState}
         currentPlayer={currentPlayer}
         winningPlayer={winningPlayer}
       />
-      <div id="board">
+      <Board>
         {tiles.map((t, i) => {
           return (
             <Tile
@@ -265,9 +266,27 @@ const Game = () => {
             />
           );
         })}
-      </div>
-    </div>
+      </Board>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  max-width: 600px;
+  margin: 100px auto;
+`
+
+const Board = styled.div`
+  
+  max-width: 600px;
+  max-height: 600px;
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 0;
+  row-gap: 0;
+  justify-items: stretch;
+  align-items: stretch;
+`
 
 export default Game;

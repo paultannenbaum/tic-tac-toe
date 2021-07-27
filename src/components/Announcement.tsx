@@ -1,5 +1,6 @@
 import { GameStateType, PlayerType } from "./Game";
 import { GAME_CLOSED, GAME_OPEN } from "./Game";
+import styled from 'styled-components'
 
 interface Props {
   gameState: GameStateType;
@@ -24,17 +25,22 @@ const Announcement = ({ gameState, currentPlayer, winningPlayer }: Props) => {
       )}
 
       {winningPlayer && (
-        <p>
+        <Info>
           <b>Winning Player:</b> {winningPlayer.name}
-        </p>
+        </Info>
       )}
       {isDraw && (
-        <p>
+        <Info>
           <b>Draw Game</b>
-        </p>
+        </Info>
       )}
     </div>
   );
 };
+
+const Info = styled.p`
+  background: lawngreen;
+`
+
 
 export default Announcement;

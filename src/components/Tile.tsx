@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 interface Props {
   xPos: number;
   yPos: number;
@@ -6,9 +8,18 @@ interface Props {
 }
 
 const Tile = ({ xPos, yPos, value, onClick }: Props) => (
-  <div className="tile" onClick={onClick}>
-    {value || "click"}
-  </div>
+  <StyledTile onClick={onClick}>
+    {value}
+  </StyledTile>
 );
+
+const StyledTile = styled.div`
+  border: 1px solid black;
+  min-height: 200px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+`
 
 export default Tile;
