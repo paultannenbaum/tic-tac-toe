@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "../styles.css";
 import Announcement from "./Announcement";
 import Tile from "./Tile";
 import styled from 'styled-components'
@@ -277,16 +276,11 @@ const Container = styled.div`
 `
 
 const Board = styled.div`
-  
   max-width: 600px;
   max-height: 600px;
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  column-gap: 0;
-  row-gap: 0;
-  justify-items: stretch;
-  align-items: stretch;
+  border: 1px solid black;
 `
 
 export default Game;

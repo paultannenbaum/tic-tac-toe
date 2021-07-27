@@ -14,12 +14,11 @@ const Tile = ({ xPos, yPos, value, onClick }: Props) => (
 );
 
 const StyledTile = styled.div`
-  border: 1px solid black;
-  min-height: 200px;
+  aspect-ratio: 1;
   display: flex;
-  justify-items: center;
   align-items: center;
-  align-content: center;
+  justify-content: center;
+  border: 1px solid black;
 `
 
 export default Tile;
