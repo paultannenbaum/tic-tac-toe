@@ -1,16 +1,16 @@
-import { GameStatus, Player } from "./Game";
+import { GameState, Player } from "./Game";
 
 interface Props {
-  gameStatus: GameStatus;
+  gameState: GameState;
   currentPlayer: Player;
   winningPlayer: Player | null;
 }
 
-const Announcement = ({ gameStatus, currentPlayer, winningPlayer }: Props) => {
+const Announcement = ({ gameState, currentPlayer, winningPlayer }: Props) => {
   return (
     <div id="announcement">
       <p>
-        <b>Game Status:</b> {gameStatus}
+        <b>Game Status:</b> {gameState}
       </p>
       <p>
         <b>Current Player:</b> {currentPlayer.name}
