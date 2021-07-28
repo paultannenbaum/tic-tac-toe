@@ -263,8 +263,6 @@ const Game = () => {
         {tiles.map((t, i) => {
           return (
             <Tile
-              xPos={t.xPos}
-              yPos={t.yPos}
               value={t.value}
               key={i}
               onClick={() => handleTileClick(t)}

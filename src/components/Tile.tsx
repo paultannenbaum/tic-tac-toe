@@ -1,13 +1,11 @@
 import styled from 'styled-components'
 
 interface Props {
-  xPos: number;
-  yPos: number;
   value: string | null;
   onClick: () => void;
 }
 
-const Tile = ({ xPos, yPos, value, onClick }: Props) => (
+const Tile = ({ value, onClick }: Props) => (
   <StyledTile onClick={onClick}>
     {value}
   </StyledTile>
